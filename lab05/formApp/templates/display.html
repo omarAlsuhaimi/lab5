@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+    {% load static %}
+    <link rel = "stylesheet" href = "{% static 'style.css'%}">
+</head>
+<body>
+<h1>People using the system are:</h1>
+<ol>
+    {%for person in people%}
+     <li>{{person.name}}</li>
+    {% endfor %}
+</ol>
+<a href = "{% url 'index'%}">Add person</a>
+</body>
+</html>
